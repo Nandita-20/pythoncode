@@ -1,4 +1,4 @@
-class Person:
+'''class Person:
     # initializing the variables
     name = ""
     age = 0
@@ -41,7 +41,7 @@ person1.showAge()
 # Create an object of the subclass
 student1 = Student("Max", 22, "102")
 print(student1.getId())
-student1.showName()
+student1.showName()'''
 
 #***************************************************************************************************
 
@@ -80,3 +80,40 @@ obj1=maths2(num1,num2) #child class object created
 obj1.sqr()    #calling parent class function using child class object (here inheritance done)
 obj1.table()  #calling child class function using child class object'''
 
+#***Example of Multiple Inheritance****
+
+'''class sum():
+    def cal(self,x,y):
+        print("the sum is",x+y)
+
+class sum1():
+    def cal1(self,x):
+        print("the square is",x*x)
+
+class final(sum,sum1):
+    def cal2(self,x,y,z):
+        print("the sum of three numbers is",x+y+z)
+
+obj=final()
+obj.cal(2,3)
+obj.cal1(4)
+obj.cal2(2,3,4)'''
+
+#Example of multilevel inheritance
+
+class sum():
+    def cal(self,x,y):
+        print("the sum is",x+y)
+
+class sum1(sum):
+    def cal1(self,x):
+        print("the square is",x*x)
+
+class final(sum1):
+    def cal2(self,x,y,z):
+        print("the sum of three numbers is",x+y+z)
+
+obj=final()
+obj.cal(2,3)
+obj.cal1(4)
+obj.cal2(2,3,4)
